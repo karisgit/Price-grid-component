@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+/* || REST */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+} */
+
+/* || VARIABLES */
+:root {
+  /* COLORS */
+
+  /* SHADOWS */
+  --CARD-SHADOW: 0px 15px 30px 0px hsla(212, 100%, 34%, 14.88%);
+
+  /* TYPOGRAPHY */
+  --FF: "Karla", sans-serif;
+  --BUTTON-SHADOW: 0px 10px 10px 0px black 0.0973;
+}
+
+/* || UTILITY CLASSES */
+/* .offscreen {
+  position: absolute;
+  left: -10000px;
+} */
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+/* .responsive-image {
+  display: none;
+} */
+
+/* MOBILE FIRST DESIGN */
+/* || GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  display: grid;
+  place-content: center;
+  background-color: #e6eff5;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+a:any-link {
+  text-decoration: none;
+}
+
+/* pricing-card */
+.pricing-card {
+  min-height: 722px;
+  max-width: 311px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 4.5rem auto 3.875rem;
+  box-shadow: var(--CARD-SHADOW);
+  background-color: white;
+}
+
+/* pricing-card-header */
+
+.pricing-card__header {
+  background-color: white;
+  width: 100%;
+  height: 267px;
+  padding: 1.75rem 1.5rem 2rem;
+}
+
+.pricing-card__title {
+  font: bold 1.25rem var(--FF);
+  letter-spacing: -0.0156rem;
+  margin-bottom: 1.5rem;
+  color: #2ab3b1;
+}
+
+.pricing-card__guarantee {
+  font: bold 0.9375rem/1.25rem var(--FF);
+  letter-spacing: -0.0119rem;
+  margin-bottom: 1rem;
+  color: #c0df33;
+  max-width: 263px;
+}
+
+.pricing-card__description {
+  font: normal 14px/26px var(--FF);
+  letter-spacing: 0.0106rem;
+  color: #9aa7be;
+  max-width: 263px;
+}
+
+/* pricing-card-subscription */
+
+.pricing-card__subscription {
+  width: 100%;
+  height: 228px;
+  background-color: #2ab3b1;
+  padding: 1.5rem;
+}
+
+.pricing-card__subscription-title {
+  color: white;
+  font: bold 18px var(--FF);
+  letter-spacing: 0.0138rem;
+  margin-bottom: 1.125rem;
+}
+
+.pricing-card__price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.6875rem;
+  margin-bottom: 0.35rem;
+}
+
+.pricing-card__price {
+  color: white;
+  font: bold 32px var(--FF);
+  letter-spacing: -0.025rem;
+}
+
+.pricing-card__label {
+  font: normal 16px/26px var(--FF);
+  color: hsla(0, 0%, 100%, 0.5);
+  letter-spacing: -0.0125rem;
+}
+
+.pricing-card__price-description {
+  font: normal 1rem/1.625rem var(--FF);
+  letter-spacing: 0.0125rem;
+  color: white;
+  margin-bottom: 1.625rem;
+}
+
+.pricing-card__cta {
+  font: bold 16px/3rem var(--FF);
+  color: white;
+  letter-spacing: 0.0125rem;
+  background-color: #c0df33;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 48px;
+  padding: 0rem 6.375rem;
+  box-shadow: var(--BUTTON-SHADOW);
+  border-radius: 5px;
+}
+
+/* pricing-card-benefits */
+
+.pricing-card__benefits {
+  width: 100%;
+  height: 227px;
+  padding: 1.5rem 3.0625rem 1.5rem 1.5rem;
+  background-color: #4abfbd;
+}
+
+.pricing-card__benefits-title {
+  font: bold 1.125rem var(--FF);
+  color: white;
+  letter-spacing: 0.0138rem;
+  margin-bottom: 1.125rem;
+}
+
+.pricing-card__benefit-item {
+  list-style-type: none;
+  max-width: 238px;
+}
+.pricing-card__benefit-item li {
+  font: normal 0.875rem/1.25rem var(--FF);
+  color: hsla(0, 0%, 100%, 0.75);
+  letter-spacing: -0.0106rem;
+}
+
+/* desktop */
+
+@media screen and (min-width: 992px) {
+  /* pricing-card */
+  .pricing-card {
+    min-height: 475px;
+    max-width: 635px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10.1875rem auto;
+    display: flex;
+    flex-flow: column;
+  }
+
+  /* pricing-card-header */
+
+  .pricing-card__header {
+    height: 216px;
+    padding: 2.5rem;
+  }
+
+  .pricing-card__title {
+    font: bold 1.25rem var(--FF);
+    letter-spacing: -0.3px;
+  }
+
+  .pricing-card__guarantee {
+    font: bold 1.125rem var(--FF);
+    letter-spacing: -0.0138rem;
+    margin-bottom: 0.6875rem;
+    max-width: 367px;
+  }
+
+  .pricing-card__description {
+    font: normal 1rem/1.625rem var(--FF);
+    letter-spacing: 0.0125rem;
+    max-width: 555px;
+  }
+
+  /* pricing-card-main */
+  .pricing-card__main {
+    display: flex;
+  }
+
+  /* pricing-card-subscription */
+
+  .pricing-card__subscription {
+    width: 50%;
+    height: 259px;
+    padding: 2.5rem;
+  }
+
+  .pricing-card__cta {
+    padding: 0rem 5.5625rem;
+  }
+
+  /* pricing-card-benefits */
+
+  .pricing-card__benefits {
+    width: 100%;
+    height: 259px;
+    padding: 2.5rem;
+    background-color: #4abfbd;
+  }
+
+  .pricing-card__cta:hover,
+  .pricing-card__cta:focus-visible {
+    background-color: rgba(255, 255, 255, 0);
+    outline: 2px solid #c0df33;
+  }
+}
