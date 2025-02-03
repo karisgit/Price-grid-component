@@ -203,7 +203,6 @@ a:any-link {
     min-height: 475px;
     max-width: 635px;
     border-radius: 8px;
-    overflow: hidden;
     margin: 10.1875rem auto;
     display: flex;
     flex-flow: column;
@@ -217,7 +216,7 @@ a:any-link {
   }
 
   .pricing-card__title {
-    font: bold 1.25rem var(--FF);
+    font: bold 1.5rem var(--FF);
     letter-spacing: -0.3px;
   }
 
